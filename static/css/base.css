@@ -51,7 +51,11 @@ body {
 .text-black {
     color: #000 !important;
 }
-
+.signup,
+.login {
+    margin-top: 17%;
+    margin-left: 50px; 
+}
 .border-black {
     border: 1px solid black !important;
 }
