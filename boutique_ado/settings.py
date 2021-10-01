@@ -176,7 +176,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#Stripe
+
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PRECENTAGE = 10
 STRIPE_CURRENCY = 'usd'
