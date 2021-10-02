@@ -94,7 +94,7 @@
                                     <label for="" class="form-check-label" for="id-save-info"> Save this delivery information to my profile</label>
                                     <input type="checkbox" class="form-check-input ml-2 mr-0" id="id-save-info" name="save-info" checked>
                                 {% else %}
-                                    <label for="id-save-infp" class="form-check-label">
+                                    <label for="id-save-info" class="form-check-label">
                                         <a href="{% url 'account_signup' %}" class="text-info">Create an account</a>
                                         <a href="{% url 'account_login' %}" class="text-info">login</a> to save this information
                                     </label>
@@ -107,6 +107,8 @@
                         <div class="mb-3" id="card-element"></div>
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
+                        <!-- Pass the client secret to the view so we can get payment intent id -->
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                       </fieldset>
                       <div class="submit-button text-right mt-5 mb-2">
                           <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
