@@ -38,6 +38,15 @@ body {
     background: black;
     color: white;
 }
+select,
+select option {
+    columns: #0000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4!important;
+}
 .btn-outline-black {
     background: white;
     color: black!important;
