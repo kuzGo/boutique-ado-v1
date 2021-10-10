@@ -23,8 +23,8 @@ class StripeWH_Handler:
         """Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
-                            'checkout/confirmation_emails/confirmation_email_subject.txt',
-                            {'order': order})
+            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            {'order': order})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
@@ -65,7 +65,7 @@ class StripeWH_Handler:
         # Update profile info if save_info was checked
         profile = None
         username = intent.metadata.username
-        if username != 'AnonymusUser':
+        if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
                 profile.default_phone_number = shipping_details.phone
